@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Urna Eletrônica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/codigo.js"></script>
+  <link rel="stylesheet" href="css/urna.css">
+</head>
+<body>
+  <div class="urna">
+    <div class="visor">
+      <div class="visor-topo">
+        <p>Número:</p>
+        <form>
+          <input id="campo1" maxlength="1" readonly>
+          <input id="campo2" maxlength="1" readonly>
+        </form>
+        <p id="infoCandidato"></p>
+        <img id="fotoCandidato" src="" alt="Foto do Candidato" style="display: none;">
+        <div id="telaFim">FIM</div>
+      </div>
+      <div class="titulo-eleitoral">JUSTIÇA<br>ELEITORAL</div>
+    </div>
+
+    <div class="teclado">
+      <div class="botoes-numericos">
+        <button class="bnt" onclick="inserir(1)">1</button>
+        <button class="bnt" onclick="inserir(2)">2</button>
+        <button class="bnt" onclick="inserir(3)">3</button>
+        <button class="bnt" onclick="inserir(4)">4</button>
+        <button class="bnt" onclick="inserir(5)">5</button>
+        <button class="bnt" onclick="inserir(6)">6</button>
+        <button class="bnt" onclick="inserir(7)">7</button>
+        <button class="bnt" onclick="inserir(8)">8</button>
+        <button class="bnt" onclick="inserir(9)">9</button>
+        <button class="bnt" onclick="inserir(0)">0</button>
+      </div>
+      <div class="botoes-acoes">
+        <button class="branco click" onclick="branco()">BRANCO</button>
+        <button class="laranja click" onclick="corrige()">CORRIGE</button>
+        <button class="verde" onclick="votar()">CONFIRMA</button>
+      </div>
+    </div>
+  </div>
+
+  <a class="link-resultado" href="#" onclick="verificarSenha()">Ver Resultado</a>
+  <audio id="somConfirmacao" src="audio/urna.mp3" preload="auto"></audio>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado da Votação</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/resultado.css">
+  <script src="js/codigo.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Resultado da Votação</h1>
+
+    <div class="botoes">
+      <button class="botao verde" onclick="resultado()">📊 Mostrar Resultado</button>
+      <button class="botao vermelho" onclick="sessionStorage.clear(); alert('Votos apagados!')">🗑️ Zerar Votação</button>
+    </div>
+
+    <div id="resultado" class="resultado-lista"></div>
+
+    <a href="urna.html">← Voltar para a votação</a>
+  </div>
+</body>
+</html>
