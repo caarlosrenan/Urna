@@ -21,13 +21,20 @@ function corrige() {
 
 function nomeDoCandidato(numero) {
     switch (numero.toString()) {
-        case "13":
-            return "Lula";
-        case "22":
-            return "Jair Bolsonaro";
+       case "21":
+            return "Kadjon";
+        case "20":
+            return "Virgínia";
+        case "14":
+            return "MC Kevin"
+        case "18":
+            return "Chorão"
+        case "10":
+            return "Danielle"
         default:
-            return "Número inválido";
+            return "Voto Nulo";
     }
+
 }
 
 function atualizarInfoCandidato() {
@@ -40,12 +47,24 @@ function atualizarInfoCandidato() {
 
     let foto = document.getElementById("fotoCandidato");
     switch (num) {
-        case "13":
-            foto.src = "img/lula.png";
+      case "21":
+            foto.src = "img/kadjon.png"
             foto.style.display = "block";
             break;
-        case "22":
-            foto.src = "img/bolsonaro.png"
+        case "20":
+            foto.src = "img/virginia.png"
+            foto.style.display = "block";
+            break;
+        case "14":
+            foto.src = "img/mckevin.png"
+            foto.style.display = "block";
+            break;
+        case "18":
+            foto.src = "img/chorao.png"
+            foto.style.display = "block";
+            break;
+        case "10":
+            foto.src = "img/danielle.png"
             foto.style.display = "block";
             break;
     }
@@ -140,7 +159,7 @@ function exibirTelaFim() {
 }
 
 function verificarSenha(){
-    const senhaCorreta = "1234";
+    const senhaCorreta = "584379";
     const senha = prompt("Digite a ssenha para ver o resultado:")
 
     if(senha === senhaCorreta){
@@ -150,4 +169,23 @@ function verificarSenha(){
     }
 }
 
+document.addEventListener("keydown", function(event) {
+    const tecla = event.key;
+
+    if (!isNaN(tecla) && tecla !== " ") {
+        inserir(parseInt(tecla));
+    }
+
+    if (tecla === "Backspace" || tecla === "Delete") {
+        corrige();
+    }
+
+    if (tecla === "Enter") {
+        votar();
+    }
+
+    if (tecla === "+") {
+        branco();
+    }
+});
 
